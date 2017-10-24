@@ -10,7 +10,7 @@
           </div>
           <div class="col-md-10 col-xs-10">
             <div class="input-group">
-              <input type="text" class="form-control input-phone" placeholder="手机号">
+              <input type="text" v-model="phoneNum" class="form-control input-phone" placeholder="手机号">
               <span class="input-group-addon span-info">
                 <label>|</label>
                 <label class="lbl-info">+86</label>
@@ -26,9 +26,9 @@
           </div>
           <div class="col-md-10 col-xs-10">
             <div class="input-group">
-              <input type="text" class="form-control input-verify" placeholder="验证码">
+              <input type="text" v-model="verifyCode" class="form-control input-verify" placeholder="验证码">
               <span class="input-group-btn">
-                <button class="btn btn-default btn-get-verify" type="button">获取验证码</button>
+                <button class="btn btn-default btn-get-verify" v-on:click="getVerify" type="button">获取验证码</button>
               </span>
             </div>
           </div>
@@ -37,7 +37,7 @@
         <div class="row">
           <div class="col-md-1 col-xs-1"></div>
           <div class="col-md-11 col-xs-11 col-login">
-            <button class="btn btn-default btn-login" type="button">登录</button>
+            <button class="btn btn-default btn-login" v-on:click="userLogin" type="button">登录</button>
           </div>
         </div>
 
@@ -48,8 +48,32 @@
 
 <script>
   export default {
-    name: 'Login'
-
+    name: 'Login',
+    data() {
+      return {
+        phoneNum: '',
+        verifyCode: ''
+      }
+    },
+    methods: {
+      getVerify() {
+        this.axios.post('http://localhost/api/get-verify', {
+          phone: this.phoneNum
+        }).then(response => {
+          console.log(response.data)
+        })
+      },
+      userLogin() {
+        console.log(this.phoneNum + ':' + this.verifyCode)
+        this.$router.push({ path: '/todo/1' }) // 待接口调通，则放入then.后面执行
+        this.axios.post('http://localhost/api/login', {
+          phone: this.phoneNum,
+          verify_code: this.verifyCode
+        }).then(response => {
+          console.log(response.data)
+        })
+      }
+    }
   }
 </script>
 
