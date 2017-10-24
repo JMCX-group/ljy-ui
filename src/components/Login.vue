@@ -118,9 +118,10 @@
     height: 86px;
     background-color: transparent;
     color: #fff;
+    font-size: 28px;
   }
 
-  /* 白色字体 + 背景透明 + 只保留底部白色边框 */
+  /* 白色字体 + 背景透明 + 只保留底部白色边框 + 字体28px */
   .input-phone,
   .input-verify,
   .span-info,
@@ -129,6 +130,7 @@
     background-color: transparent;
     border: 0 solid #fff;
     border-bottom-width: 1px;
+    font-size: 28px;
   }
 
   /* input焦点样式 */

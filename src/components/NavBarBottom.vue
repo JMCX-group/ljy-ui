@@ -1,6 +1,6 @@
 <template>
   <div id="nav-bar-bottom">
-    <div class="navbar navbar-inverse navbar-inner navbar-fixed-bottom div-nav-bar">
+    <div class="navbar navbar-inverse navbar-inner navbar-fixed-bottom div-nav-bar-bottom">
       <div class="row">
         <div class="col-md-3 col-xs-3 div-img">
           <img v-if="clicked === 'with-tour'" class="img-nav-bar" v-on:click="toWithTour" src="../assets/nav-bar/with-tour-clicked.png" alt="">
@@ -45,8 +45,8 @@
 </script>
 
 <style>
-  /* 白色字体 + 背景透明 + 只保留底部白色边框 */
-  .div-nav-bar {
+  /* 背景透明 + 只保留顶部灰色边框 */
+  .div-nav-bar-bottom {
     background-color: #ffffff;
     border: 0 solid #999999;
     border-top-width: 1px;
