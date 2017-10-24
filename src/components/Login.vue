@@ -65,7 +65,7 @@
       },
       userLogin() {
         console.log(this.phoneNum + ':' + this.verifyCode)
-        this.$router.push({ path: '/todo/1' }) // 待接口调通，则放入then.后面执行
+        this.$router.push({ path: '/find' }) // 待接口调通，则放入then.后面执行
         this.axios.post('http://localhost/api/login', {
           phone: this.phoneNum,
           verify_code: this.verifyCode
