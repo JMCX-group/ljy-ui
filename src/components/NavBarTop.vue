@@ -1,5 +1,5 @@
 <template>
-  <div id="nav-bar">
+  <div id="nav-bar-top">
     <div class="navbar navbar-inverse navbar-inner navbar-fixed-bottom div-nav-bar">
       <div class="row">
         <div class="col-md-3 col-xs-3 div-img">
@@ -25,7 +25,7 @@
 
 <script>
   export default {
-    name: 'NavBar',
+    name: 'NavBarTop',
     props: ['clicked'], // 引入到组件中的数据/变量
     methods: {
       toWithTour() {

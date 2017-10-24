@@ -1,12 +1,12 @@
 <template>
   <div id="with-tour">
 
-    <nav-bar :clicked="clickedVal"></nav-bar>
+    <nav-bar-top :clicked="clickedVal"></nav-bar-top>
   </div>
 </template>
 
 <script>
-  import NavBar from './NavBar' // 引入子组件
+  import NavBarTop from './NavBarTop' // 引入子组件
 
   export default {
     name: 'WithTour',
@@ -16,7 +16,7 @@
       }
     },
     components: { // 引入子组件
-      NavBar
+      NavBarTop
     }
   }
 </script>
