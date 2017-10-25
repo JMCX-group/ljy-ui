@@ -4,12 +4,12 @@
     <div class="div-list-data" v-for="data in listData">
 
       <div class="row row-style">
-        <div class="col-md-2 col-xs-2 col-avatar">
+        <div class="col-sm-2 col-xs-2 col-avatar">
           <!--<img class="img-avatar img-circle" :src="data.avatar"/>-->
           <img class="img-avatar img-circle" src="../assets/demo-img/avatar1.jpg"/>
         </div>
 
-        <div class="col-md-6 col-xs-6 col-all-info-center">
+        <div class="col-sm-6 col-xs-6 col-all-info-center">
           <div class="row">
             <p class="name-font-size">{{data.name}}</p>
           </div>
@@ -22,15 +22,18 @@
           </div>
         </div>
 
-        <div class="col-md-4 col-xs-4 col-other-info">
-          <div class="row  info-font-size row-other-info"><p class="pull-right">发布于</p></div>
-          <div class="row  info-font-size row-other-info"><p class="pull-right">{{data.time}}</p></div>
+        <div class="col-sm-4 col-xs-4 col-other-info">
+          <div class="row info-font-size row-other-info"><p class="pull-right">发布于</p></div>
+          <div class="row info-font-size row-other-info"><p class="pull-right">{{data.time}}</p></div>
         </div>
       </div>
 
       <div class="row row-style">
-        <div class="col-md-1 col-xs-1"><div class="span-line span-color"></div></div>
-        <div class="col-md-11 col-xs-11 col-desc">旅游愿望：{{data.desc}}</div>
+        <div class="col-sm-1 col-xs-1">
+          <div class="span-line"
+               v-bind:class="[data.gender === 0 ? 'span-color-red' : 'span-color-blue']"></div>
+        </div>
+        <div class="col-sm-11 col-xs-11 col-desc">旅游愿望：{{data.desc}}</div>
       </div>
 
       <div class="row row-style row-img-show">
@@ -102,8 +105,11 @@
     margin-top: 5px;
     margin-left: 15px;
   }
-  .span-color {
+  .span-color-red {
     background-color: #ed3833;
+  }
+  .span-color-blue {
+    background-color: #33a5ed;
   }
   .col-desc {
     font-size: 32px;

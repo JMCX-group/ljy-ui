@@ -4,9 +4,9 @@
 
       <swiper :options="swiperOption">
         <!--<swiper-slide><img :src="this.imgUrl[0]" class="img-responsive " alt=""></swiper-slide>-->
-        <swiper-slide><img src="../assets/demo-img/banner1.jpg" class="img-responsive " alt=""></swiper-slide>
-        <swiper-slide><img src="../assets/demo-img/banner2.jpg" class="img-responsive " alt=""></swiper-slide>
-        <swiper-slide><img src="../assets/demo-img/banner3.jpg" class="img-responsive " alt=""></swiper-slide>
+        <swiper-slide><img src="../assets/demo-img/banner1.jpg" class="img-responsive" alt=""></swiper-slide>
+        <swiper-slide><img src="../assets/demo-img/banner2.jpg" class="img-responsive" alt=""></swiper-slide>
+        <swiper-slide><img src="../assets/demo-img/banner3.jpg" class="img-responsive" alt=""></swiper-slide>
         <div class="swiper-pagination swiper-pagination-white" slot="pagination"></div>
       </swiper>
 
